@@ -1,0 +1,386 @@
+@import "./config";
+
+.main {
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.main-content {
+  > div:last-child {
+    margin-right: -12px;
+
+    > div:first-child {
+      max-height: 854px;
+      overflow-y: scroll;
+      margin-right: -24px;
+      background: #fff;
+      filter: drop-shadow(0px 3px 3.5px rgba(0, 0, 0, 0.05));
+      padding: 20px 20px 40px;
+    }
+  }
+
+  .categories {
+    td:last-child {
+      text-transform: capitalize;
+    }
+  }
+
+  .customers {
+    td:nth-child(2) {
+      text-transform: capitalize;
+    }
+  }
+}
+
+.table {
+  input {
+    font-size: 14px;
+    outline: none !important;
+    padding: 4px 4px;
+    text-align: center;
+    border-radius: 2px;
+    border: 1px solid $grey2;
+  }
+
+  input[type="number"] {
+    width: 120px;
+  }
+
+  th, td {
+    padding: 8px 12px;
+  }
+}
+
+@media screen and (max-width: 1380px) {
+  .main-content {
+    .products {
+      table {
+        tr {
+          td:first-child {
+            width: 10%;
+          }
+
+          td:nth-child(2) {
+            width: 45%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .table {
+    input[type=number] {
+      width: 95px;
+      padding: 4px 2px 4px 4px;
+    }
+  }
+
+  .main-content {
+    .products {
+      table {
+        tr {
+          td:nth-child(2) {
+            width: 48%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  .table {
+    input {
+      font-size: 11px;
+    }
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .menu-wrapper {
+    padding: 0 8px 0 0;
+    width: 18%;
+  }
+
+  table {
+    display: inline-block;
+
+    thead {
+      display: inline-block;
+      width: 100%;
+
+      tr {
+        display: flex;
+
+        th {
+          font-size: 12px;
+        }
+      }
+    }
+
+    tbody {
+      display: block;
+
+      tr {
+        display: block;
+        width: 100%;
+
+        td {
+          width: 100% !important;
+          display: block;
+
+          &:before {
+            font-weight: 700;
+          }
+
+          div {
+            &:before {
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .table {
+    input {
+      max-width: 130px;
+      font-size: 10px;
+    }
+  }
+
+  .products {
+    table {
+      thead {
+        th {
+          width: 34%;
+        }
+      }
+
+      tbody {
+        td:first-child {
+          &:before {
+            content: "ID: ";
+          }
+        }
+
+        td:nth-child(2) {
+          &:before {
+            content: "Título: ";
+          }
+        }
+
+        td:last-child {
+          div {
+            &:before {
+              content: "Preço: ";
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .categories {
+    table {
+      thead {
+        th {
+          width: 50%;
+        }
+      }
+
+      tbody {
+        td:first-child {
+          &:before {
+            content: "ID: ";
+          }
+        }
+
+        td:last-child {
+          &:before {
+            content: "Título: ";
+          }
+        }
+      }
+    }
+  }
+
+  .customers {
+    table {
+      thead {
+        th {
+          width: 25%;
+        }
+      }
+
+      tbody {
+        td:first-child {
+          &:before {
+            content: "ID: ";
+          }
+        }
+
+        td:nth-child(2) {
+          &:before {
+            content: "Nome: ";
+          }
+        }
+
+        td:nth-child(3) {
+          &:before {
+            content: "E-mail: ";
+          }
+        }
+
+        td:last-child {
+          &:before {
+            content: "Telefone: ";
+          }
+        }
+      }
+    }
+  }
+
+  .main-content {
+    > div:last-child {
+      > div:first-child {
+        height: 62%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 780px) and (min-height: 1000px) {
+  .main-content {
+    > div:last-child {
+      > div:first-child {
+        height: 82%;
+      }
+    }
+  }
+
+  .menu-wrapper {
+    width: 16%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .menu-wrapper {
+    width: 100%;
+  }
+
+  .main {
+    max-height: none;
+    overflow: initial;
+    overflow-x: hidden;
+  }
+
+  .main-content {
+    > div:last-child {
+      > div:first-child {
+        height: auto;
+        max-height: none;
+        padding: 20px 8px 40px;
+      }
+    }
+  }
+
+  table {
+    tbody {
+      td {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .table {
+    th {
+      padding: 8px 8px;
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .products {
+    table {
+      thead {
+        th:last-child {
+          width: 37%;
+        }
+      }
+    }
+  }
+
+  .table {
+    input {
+      font-size: 9px;
+    }
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .customers {
+    table {
+      thead {
+        display: block;
+        width: 100%;
+
+        tr {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+
+          th {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .products {
+    table {
+      thead {
+        tr {
+          flex-wrap: wrap;
+          text-align: center;
+
+          th {
+            width: 50%;
+          }
+
+          th:last-child {
+            width: 100%;
+            border-top: 1px solid #dfe0e1;
+          }
+
+          th:last-child {
+            div {
+              display: block !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .products {
+    table {
+      thead {
+        tr {
+          th, th:last-child {
+            width: 100%;
+            border-top: none;
+          }
+        }
+      }
+    }
+  }
+}

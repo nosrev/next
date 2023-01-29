@@ -1,0 +1,165 @@
+@import "../scss/config";
+
+#header {
+  filter: drop-shadow(0px 3px 3.5px rgba($black,0.05));
+  background-color: $white;
+  height: 85px;
+  align-items: center;
+  margin-bottom: 26px;
+  position: relative;
+  z-index: 999;
+
+  .username {
+    font-size: 18px;
+    color: $grey;
+    margin: 0 4px 0 15px;
+  }
+
+  .logo {
+    margin-left: 56px;
+  }
+
+  .settings {
+    margin-right: 26px;
+    margin-left: 20px;
+    cursor: pointer;
+
+    &:after {
+      display: none;
+    }
+
+    svg {
+      stroke: $black;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .dropdownMenu {
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.251));
+    border: none;
+    padding: 0;
+    position: absolute;
+    min-width: 210px;
+    margin-top: 14px !important;
+
+    li {
+      .dropdownItem {
+        font-size: 16px;
+        font-weight: 300;
+        padding: 0.94rem 1.4rem;
+        cursor: pointer;
+
+        &:hover {
+          background: none;
+        }
+      }
+
+      .dropdownItem.active, .dropdownItem:active {
+        background: $white;
+      }
+
+      + li {
+        border-top: 1px solid #E2E2E2;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1650px) {
+  #header {
+    height: 65px;
+
+    .username {
+      font-size: 1.125rem;
+    }
+
+    .dropdownMenu {
+      li {
+        .dropdownItem {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 830px) {
+  #header {
+    .username {
+      margin: 0 14px 0 15px;
+    }
+
+    .settings {
+      margin-right: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  #header {
+    .logo {
+      margin-left: 0;
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .username {
+      font-size: 12px;
+      margin: 0 14px 0 15px;
+    }
+
+    .avatar {
+      max-width: 40px;
+    }
+
+    .settings {
+      margin-right: 12px;
+
+      svg {
+        width: 18px;
+      }
+    }
+
+    .dropdownMenu {
+      min-width: 150px;
+
+      li {
+        .dropdownItem {
+          font-size: 12px;
+          padding: 0.6rem 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #header {
+    > div:last-child {
+      margin-top: 6px;
+    }
+
+    .settings {
+      margin-left: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 300px) {
+  #header {
+    .username {
+      margin: 0 10px 0 12px;
+    }
+
+    .settings {
+      margin-left: 12px;
+    }
+
+    .avatar {
+      max-width: 30px;
+    }
+  }
+}

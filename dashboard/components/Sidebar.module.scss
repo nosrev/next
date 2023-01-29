@@ -1,0 +1,217 @@
+@import "../scss/config";
+
+#sidebar {
+  padding: 34px 26px 25px;
+  background: $white;
+  filter: drop-shadow(0px 3px 3.5px rgba(0,0,0,0.05));
+  height: 854px;
+}
+
+.menu {
+  span {
+    font-size: 18px;
+    color: $grey2;
+    font-weight: 500;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      padding: 15px 10px 15px 38px;
+      border-radius: 29px;
+
+      a {
+        font-size: 18px;
+        color: $grey;
+        font-weight: 600;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      + li {
+        margin-top: 30px;
+      }
+    }
+
+    li.active {
+      a {
+        color: $bg;
+        font-weight: 700;
+
+        svg {
+          fill: $bg;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1650px) {
+  #sidebar {
+    .menu {
+      ul {
+        li {
+          a {
+            font-size: 1.063rem;
+          }
+        }
+      }
+
+      span {
+        font-size: 1.125rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  #sidebar {
+    padding: 34px 18px 25px;
+
+    .menu {
+      ul {
+        li {
+          padding: 15px 10px 15px 26px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+    #sidebar {
+      height: 860px;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .menu {
+      ul {
+        li {
+          a {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+}
+
+@media screen and (max-height: 920px) {
+  #sidebar {
+    height: 88vh;
+  }
+
+  .menu {
+    ul {
+      li {
+        + li {
+          margin-top: 1vh;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-height: 800px) {
+  #sidebar {
+    height: 87vh;
+  }
+
+  .menu {
+    ul {
+      li {
+        padding: 10px 10px 10px 38px;
+
+        + li {
+          margin-top: 1vh;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-height: 700px) {
+  #sidebar {
+    height: 122vh;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .menu {
+    span {
+      font-size: 14px;
+    }
+
+    ul {
+      li {
+        padding: 10px 10px 10px 16px;
+
+        a {
+          font-size: 14px;
+
+          svg {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .menu {
+    ul {
+      li {
+        padding: 10px;
+
+        a {
+          font-size: 12px !important;
+        }
+      }
+    }
+  }
+
+  #sidebar {
+    padding: 4vh 0 3vh;
+    height: 700px;
+  }
+}
+
+@media screen and (max-width: 780px) and (min-height: 1000px) {
+  #sidebar {
+    .menu {
+      ul {
+        li {
+          padding: 15px 10px 15px 18px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #sidebar {
+    height: auto;
+    padding: 0;
+    margin-bottom: 20px;
+    margin-left: 10px;
+
+    .menu {
+      ul {
+        margin-bottom: 0;
+        display: flex;
+        justify-content: space-between;
+
+        li {
+          padding: 8px 10px;
+
+          + li {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+}
